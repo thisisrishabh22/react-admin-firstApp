@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server":"json-server --watch db.json --port 5000"
+    "server": "json-server --watch db.json --port 5000",
+    "client-start": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client-start\""
   },
   "keywords": [],
-  "author": {"name": "Rishabh Singh"},
+  "author": {
+    "name": "Rishabh Singh"
+  },
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^6.2.1",
     "json-server": "^0.16.3"
   }
 }
